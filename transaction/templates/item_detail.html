@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 英语就是en -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="{% static 'transaction/css/proDetail.css' %}">
+    <link rel="stylesheet" href="{% static 'transaction/css/iconfont.css' %}">
+    <script src="{% static 'transaction/js/remScale.js' %}"></script>
+    <title>{% block title %}交易小镇{% endblock %}</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="wrap">
+                <a href=""><img src="http://image.yunduanjianzhan.cn:4999/static/imgs/jpg/8.jpg"></a>
+                <h2>商品分类</h2>
+                <div class="points">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="pic">
+            <a href="#">
+                <img class="img1" src="{{ item.image.url }}">
+                <img class="img2" src="{{ item.image.url }}">
+            </a>
+            <div class="info">
+                <p class="des">{{ item.title }}</p>
+                <p class="price"><i>¥</i> {{ item.price }} <span></span></p>
+                
+            </div>
+        </div>
+        <div class="buy">
+            <div class="cuxiao">
+                <span>描述：</span>
+                <span> {{ item.description }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+            <div class="cuxiao">
+                <span>发布人用户名： </span>
+                <span>{{ item.owner.username  }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+            <div class="cuxiao">
+                <span>邮箱： </span>
+                <span>{{ item.owner.email  }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+            <div class="cuxiao">
+                <span>电话： </span>
+                <span> {{ contact.phone }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+
+            <div class="cuxiao">
+                <span>QQ： </span>
+                <span> {{ contact.qq }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+            <div class="cuxiao">
+                <span>微信： </span>
+                <span> {{ contact.wechat }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+            <div class="cuxiao">
+                <span>中南大学校区：</span>
+                <span> {{ contact.campus }}</span>
+                <span><img src="images/detail_images/arrow.jpg"></span>
+            </div>
+
+        </div>
+        <div class="produce">
+
+       
+    </div>
+
+</body>
+
+</html>
+
+

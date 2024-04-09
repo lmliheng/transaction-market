@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <header class="header">
+        <div class="wrap">
+            <h1>
+                <a href="">
+                    <img src="{% static 'transaction/images/logo.png' %}">
+                </a>
+            </h1>
+            <input type="text" placeholder="查找">
+            <div class="points">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <div class="goods">
+        <section id="introduction">
+            <h2>欢迎来到我们的物品交易网站！</h2>
+            <p>
+                -----------------------------------
+             </p>
+            <p>在这里，您可以轻松买卖各种物品，无论是二手商品还是全新宝贝。</p>
+            <p>我们的平台致力于为用户提供一个安全、便捷、高效的交易环境。</p>
+            <p>通过我们精心设计的界面和智能推荐系统，</p>
+            <p>您可以快速找到心仪的物品，同时也能将您的闲置物品变废为宝。</p>
+            <p>我们重视每一位用户的体验，因此采用了严格的审核机制和安全措施，
+            <p>确保交易过程中的每一环节都得到妥善处理。</p>
+ 
+        </section>
+
+        <section id="privacy-policy">
+
+            <p>
+               -----------------------------------
+            </p>
+            <h2>隐私协议</h2>
+            <p>在使用我们的物品交易网站前，请您仔细阅读本隐私协议。</p>
+
+            <ol>
+                <li><strong>我们会收集您的基本信息,</strong></li>
+                <li><strong>如用户名、密码、邮箱地址等，以便为您提供注册、登录和个性化服务。</strong></li>
+                <li><strong>为保障交易安全，</strong></li>
+                <li><strong>我们会记录您的交易信息和行为日志，但绝不会泄露给第三方。</strong></li>
+                <li><strong>我们可能会使用cookies技术，</strong></li>
+                <li><strong>来提升您的浏览体验，您有权选择接受或拒绝。</strong></li>
+                <li><strong>未经您同意，</strong></li>
+                <li><strong>我们不会将您的个人信息用于任何商业推广活动。</strong></li>
+                <li><strong>您的账户信息受到严格保护，</strong></li>
+                <li><strong>只有您本人可以访问。若发现异常情况，请立即联系我们。</strong></li>
+            </ol>
+        </section>
+
+        <section id="how-to-use">
+            <p>
+                -----------------------------------
+             </p>
+            <h2>使用方法</h2>
+
+            <ul>
+                <li><strong>注册账号：</strong>点击首页的“注册”按钮，填写必要信息并提交。</li>
+                <li><strong>登录系统：</strong>使用您的用户名和密码登录。</li>
+                <li><strong>发布物品：</strong>点击“发布”按钮，填写物品详情并上传照片。</li>
+                <li><strong>搜索物品：</strong>在搜索框输入关键词，即可找到相关物品。</li>
+                <li><strong>联系卖家/买家：</strong>通过站内信或预留联系方式进行沟通。</li>
+                <li><strong>完成交易：</strong>确认无误后，选择支付方式并完成付款。</li>
+                <li><strong>评价对方：</strong>交易完成后，您可以对对方进行评价。</li>
+            </ul>
+        </section>
+
+        <section id="contact-us">
+            <p>
+                -----------------------------------
+             </p>
+            <h2>联系方式</h2>
+            <p>如有任何疑问或需要帮助，请随时通过以下方式与我们联系：</p>
+            <ul>
+                <li><strong>邮箱：</strong><a href="mailto:your@email.com">liheng2137@qq.com</a></li>
+                <li><strong>电话：</strong>13551458597</li>
+                <li><strong>在线客服：</strong>点击首页右下角的“在线客服”图标</li>
+            </ul>
+            <p>我们期待您的光临，祝您交易愉快！</p>
+        </section>
+    </div>
+    <div class="banner">
+
+        <a href="transaction"><img src="{% static 'transaction/images/index.gif' %}"></a>
+    </div>
+
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <h1>商品发布管理</h1>
+  <h2>发布新商品</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+   <button type="submit">发布商品</button>
+  </form>
+  <h2>已发布商品</h2>
+ <table>
+    <tr>
+      <th>名称</th>
+      <th>价格</th>
+      <th>操作</th>
+    </tr>
+    {% for item in items %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+          <form method="post">
+            {% csrf_token %}
+           <input type="hidden" name="item_id" value="{{ item.id }}">
+           <button type="submit" name="delete">删除</button>
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>个人主页</h1>
+  <div>
+    <h2>联系信息</h2>
+    <p>姓名：{{ contact.name }}</p>
+    <p>电话：{{ contact.phone }}</p>
+    <p>邮箱：{{ contact.email }}</p>
+    <p>微信：{{ contact.wechat }}</p>
+    <p>QQ：{{ contact.qq }}</p>
+    <p>校园：{{ contact.campus }}</p>
+  </div>
+{% endblock %}

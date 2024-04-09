@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 英语就是en -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="author" content="">
+    <meta name="description" content="" />
+    <link rel="Shortcut Icon" href="http://web.yunduanjianzhan.cn/images/logos/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'transaction/css/base.css' %}">
+
+    <title>{% block title %}交易小镇{% endblock %}</title>
+  </head>
+  <body>
+  
+
+        {% block content %}{% endblock %}
+
+
+        <!--页脚-->
+        <div class="fixed-menu">
+            <div class="con">
+                <nav class="nav">
+                    <a href="">
+                        <i></i>首页
+                    </a>
+                    <a href="#">
+                        <i></i>购物车
+                    </a>
+                    <a href="#">
+                        <i></i>我的
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+  <script src="{% static 'transaction/js/index.js' %}"></script>
+  </body>
+  </html>

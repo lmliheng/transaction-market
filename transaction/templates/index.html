@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+  <header class="header">
+      <div class="wrap">
+          <h1>
+              <a href="">
+                  <img src="{% static 'transaction/images/logo.png' %}">
+              </a>
+          </h1>
+          <input type="text" placeholder="查找">
+          <div class="points">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </div>
+  </header>
+  <nav class="nav">
+      <div class="wrap">
+          <ul>
+              <li class="first">
+                  <a href="#">最新</a>
+              </li>
+              <li>
+                  <a href="#">书籍</a>
+              </li>
+              <li>
+                  <a href="#">资料</a>
+              </li>
+              <li>
+                  <a href="#">数码</a>
+              </li>
+
+
+          </ul>
+          <span class="arrow">
+              <img src="{% static 'transaction/images/arrow.jpg' %}">
+          </span>
+      </div>
+  </nav>
+  <div class="banner">
+      <a href="#"><img src="{% static 'transaction/images/index.gif' %}"></a>
+      <a href="#"><img src="{% static 'transaction/images/index.gif' %}"></a>
+  </div>
+  <div class="flex-nav">
+      <div class="item ">
+          <a href="must_know">
+              <img src="{% static 'transaction/images/icon_1.jpg' %}">
+              <p>使用须知</p>
+          </a>
+      </div>
+      <div class="item ">
+          <a href="post_item">
+              <img src="{% static 'transaction/images/icon_2.jpg' %}">
+              <p>发布商品</p>
+          </a>
+      </div>
+      <div class="item ">
+          <a href="edit_contact">
+              <img src="{% static 'transaction/images/icon_3.jpg' %}">
+              <p>修改联系方式</p>
+          </a>
+      </div>
+      <div class="item ">
+          <a href="owner">
+              <img src="{% static 'transaction/images/icon_4.jpg' %}">
+              <p>关于镇长</p>
+          </a>
+      </div>
+
+  </div>
+
+
+      {% for item in items %}
+
+      <div class="goods">
+
+        <div class="good clearfix">
+            <div class="left">
+                <a href="item/{{ item.id }}"><img src="{{ item.image.url }}" alt="{{ item.title }}"></a>
+            </div>
+            <div class="right">
+                <p class="title">{{ item.title }}</p>
+                <p class="price">{{ item.price }}元</p>
+                <p class="count">{{ item.owner }}</p>
+                <a href="item/{{ item.id }}">
+                    <div class="btn">查看详情</div>
+                </a>
+              
+            </div>
+        </div>
+      {% empty %}
+        <div class="col-md-12">
+          <p>暂无商品</p>
+        </div>
+      {% endfor %}
+{% endblock %}
+
+

@@ -5,7 +5,7 @@ Hello，我是小恒不会java
 最近有事，先发布代码了，我就随缘维护更新吧
 
 # 介绍
-![image]()
+![image](https://github.com/lmliheng/transaction-market/blob/main/readme.png)
 定位：小众交易网页
 核心功能：登录注册认证，商品管理浏览，搜索逻辑，购物车
 目的：熟悉django以及MVT模式，模拟业务
